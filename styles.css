@@ -1,0 +1,481 @@
+.head-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+}
+.head-container nav {
+    display: flex;
+    gap: 30px;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+.cart {
+    color: black;
+}
+.categories {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four equal columns */
+    gap: 20px;                            /* Space between the images */
+    margin: 20px auto;                    /* Margin around the section */
+    padding: 0 20px;                      /* Padding on the sides */
+    max-width: 1200px;                    /* Center the section with max width */
+  }
+  
+  /* Each category block */
+  .category {
+    position: relative;
+    overflow: hidden;                     /* Ensures overlay doesn't overflow */
+    border-radius: 8px;                   /* Optional: Rounded corners */
+  }
+  
+  .category img {
+    width: 100%;                          /* Make images responsive */
+    height: 250px;                        /* Set a fixed height for images */
+    object-fit: cover;                    /* Ensure images cover the container */
+    transition: transform 0.3s ease;      /* Smooth hover zoom effect */
+  }
+  
+  .category:hover img {
+    transform: scale(1.1);                /* Slight zoom on hover */
+  }
+  
+  /* Overlay with text */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);       /* Semi-transparent overlay */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;                           /* Hidden by default */
+    transition: opacity 0.3s ease;        /* Smooth fade effect */
+  }
+  
+  .category:hover .overlay {
+    opacity: 1;                           /* Show overlay on hover */
+  }
+  
+  .overlay h2 {
+    color: #fff;                          /* White text for contrast */
+    font-size: 20px;                      /* Adjust text size */
+    text-align: center;                   /* Center the text */
+    margin: 0;
+  }
+.intro {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.col-2 {
+    flex-basis: 50%;
+    min-width:  300px;
+}
+.col-2 img {
+    max-width: 100%;
+    padding: 50px 0;
+}
+/* Most Selling Products Section */
+.most-selling-products {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto; /* Center the section */
+  }
+  
+  .most-selling-products h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+    border-bottom: 2px solid #ddd;
+  }
+  
+  /* Grid for product cards */
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    gap: 20px; /* Space between products */
+    border-bottom: 2px solid #ddd;
+  }
+  
+  /* Product card styling */
+  .product-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transform and shadow */
+  }
+  
+  /* Image styling */
+  .product-card img {
+    width: 100%;
+    height: 200px;  /* Set a fixed height for images */
+    object-fit: cover; /* Ensure images are fully contained */
+    border-radius: 5px;
+  }
+  
+  /* Product text styling */
+  .product-card h3 {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  .product-card p {
+    font-size: 16px;
+    color: #333;
+    margin: 5px 0;
+  }
+  
+  /* Hover effect for product cards */
+  .product-card:hover {
+    transform: translateY(-5px); /* Moves the card 5px upwards */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Slightly larger shadow for emphasis */
+  }
+/* Footer Styling */
+.footer {
+  background-color: #000; /* Crna pozadina */
+  color: #fff; /* Beli tekst */
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+  flex: 1;
+  min-width: 250px;
+}
+
+/* Leva strana */
+.footer-left h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.footer-left p {
+  margin: 5px 0;
+}
+
+/* Sredina */
+.footer-center {
+  text-align: center;
+}
+
+.footer-logo {
+  max-width: 150px;
+  margin: 0 auto;
+}
+
+/* Desna strana */
+.footer-right h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.footer-right p {
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-right a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-right a:hover {
+  color: #007bff; /* Plava na hover */
+}
+
+/* Ikone */
+.footer-right i {
+  font-size: 16px;
+}
+
+/* Responsivnost */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    min-width: 100%;
+  }
+}
+.categories-container {
+  width: 250px;
+  padding: 20px;
+  background: none;
+  border: none;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+.categories-container h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+.categories-container label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.categories-container input[type="checkbox"] {
+  margin-right: 10px;
+}
+/* Kontakt stranica */
+.contact-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-container h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.contact-container p {
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: none; /* Disable resizing for the textarea */
+}
+
+.form-group textarea {
+  height: 150px; /* Height of the textarea */
+}
+
+button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+/* Globalne postavke */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Stilovi za navigaciju i header */
+.head-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.head-container img {
+  max-width: 150px;
+}
+
+.head-container nav {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.head-container .cart {
+  font-size: 20px;
+}
+
+/* Intro sekcija */
+.intro {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+}
+
+.col-2, .col2 {
+  flex: 1 1 300px; /* Omogućuje fleksibilnost */
+  text-align: center;
+}
+
+.col2 img {
+  max-width: 90%;
+  height: auto;
+}
+
+/* Kategorije */
+.categories {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.category img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.category:hover img {
+  transform: scale(1.1);
+}
+
+.overlay h2 {
+  font-size: 18px;
+}
+
+/* Proizvodi */
+.most-selling-products .products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.product-card img {
+  max-width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Footer */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 20px;
+  background: #000;
+  color: #fff;
+}
+
+.footer-left, .footer-center, .footer-right {
+  flex: 1 1 300px;
+  margin: 10px 0;
+}
+
+/* Responsivni dizajn */
+@media (max-width: 1024px) {
+  .categories {
+      grid-template-columns: repeat(3, 1fr); /* 3 kolone na tabletima */
+  }
+
+  .most-selling-products .products-grid {
+      grid-template-columns: repeat(3, 1fr); /* 3 proizvoda u redu */
+  }
+}
+
+@media (max-width: 768px) {
+  .head-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .intro {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .categories {
+      grid-template-columns: repeat(2, 1fr); /* 2 kolone na manjim ekranima */
+  }
+
+  .most-selling-products .products-grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 proizvoda u redu */
+  }
+}
+
+@media (max-width: 480px) {
+  .head-container nav {
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .categories {
+      grid-template-columns: 1fr; /* 1 kolona na mobilnim uređajima */
+  }
+
+  .most-selling-products .products-grid {
+      grid-template-columns: 1fr; /* 1 proizvod u redu */
+  }
+
+  .intro h1 {
+      font-size: 20px;
+  }
+
+  .intro p {
+      font-size: 14px;
+  }
+
+  .footer-container {
+      text-align: center;
+  }
+}
